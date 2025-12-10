@@ -105,13 +105,17 @@ section section h4 {
     font-size: 1.2rem;
 }
 
-section section h4 a {
+section section a {
     color: #0077cc;
     text-decoration: none;
 }
 
-section section h4 a:hover {
+section section a:hover h4 {
     text-decoration: underline;
+}
+
+section section p {
+    color: #333;
 }
 
 .grid {
