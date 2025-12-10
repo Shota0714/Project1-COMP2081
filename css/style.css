@@ -8,10 +8,22 @@
 	font-style: normal;
 }
 
+:root {
+    --primary-color: #cb0000;
+    --font-stack: "Exo Medium", Arial, sans-serif;
+}
+
 body {
     background-color: #f9f9f9;
     color: #333;
+    font-family: Arial, sans-serif;
 }
+
+h2, h3, h4 {
+    font-family: var(--font-stack);
+}
+
+/* Header styles */
 
 header {
     display: flex;
@@ -20,7 +32,7 @@ header {
     padding: 10px 20px;
     background-color: #fff;
     border-bottom: 2px solid #e0e0e0;
-    font-family: "Exo Medium", Arial, sans-serif;
+    font-family: var(--font-stack);
 }
 
 header img {
@@ -43,16 +55,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #cb0000;
+    color: var(--primary-color);
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 nav ul li a:hover {
-    background-color: #cb0000;
+    background-color: var(--primary-color);
     color: #fff;
 }
+
+/* Main content styles */
 
 main {
     padding: 2rem;
@@ -66,10 +80,32 @@ main h1 {
     margin-bottom: 0.5rem;
 }
 
+main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    text-align: left;
+}
+
 main h3 {
     font-size: 1.7rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+}
+
+main article section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+main article section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 0 10px;
 }
 
 section section {
@@ -124,6 +160,8 @@ section section p {
     gap: 20px;
 }
 
+/* Footer styles */
+
 footer {
     text-align: center;
     padding: 10px;
@@ -137,6 +175,7 @@ footer p {
     margin-top: 7px;
 }
 
+/* SVG Car Styles */
 
 #car {
     display: block;
@@ -144,11 +183,9 @@ footer p {
 }
 
 #car-body, #car-cabin {
-    fill: #cb0000; 
+    fill: var(--primary-color); 
     stroke: #800000;
     stroke-width: 3px;
-    rx: 13; 
-    ry: 13;
 }
 
 #car-cabin {
@@ -159,12 +196,148 @@ footer p {
     fill: #a0d8f0;
     stroke: #004080;
     stroke-width: 2px;
-    rx: 5;
-    ry: 5;
 }
 
 .wheel {
     fill: #333;
     stroke: #ffffff;
     stroke-width: 5px;
+}
+
+/* Accordion Styles */
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.accordion-button {
+    font-family: var(--font-stack);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.accordion-collapse {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 0 8px 8px;
+}
+
+.accordion-collapse ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.accordion-collapse li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.accordion-collapse li:last-child {
+    border-bottom: none;
+}
+
+/* Form Styles */
+#form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#form h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+#form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+#form label {
+    font-weight: bold;
+    flex-basis: 100%;
+    margin-top: 5px;
+}
+
+#form input, #form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    flex-grow: 1;
+}
+
+#form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    flex-grow: 1;
+}
+
+#form button:hover {
+    background-color: #800000;
+}
+
+/* Related Models Styles */
+main article section h3 {
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+main article section.col-12 ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: space-around;
+}
+
+main article section.col-12 ul li {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+main article section.col-12 ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main article section.col-12 ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main article section.col-12 ul li img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: none;
 }
