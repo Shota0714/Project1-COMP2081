@@ -132,3 +132,35 @@ footer {
 footer p {
     margin-top: 7px;
 }
+
+
+#car {
+    display: block;
+    margin: 50px auto;
+}
+
+#car-body, #car-cabin {
+    fill: #cb0000; 
+    stroke: #800000;
+    stroke-width: 3px;
+    rx: 13; 
+    ry: 13;
+}
+
+#car-cabin {
+    fill: #ff3333;
+}
+
+#car-window {
+    fill: #a0d8f0;
+    stroke: #004080;
+    stroke-width: 2px;
+    rx: 5;
+    ry: 5;
+}
+
+.wheel {
+    fill: #333;
+    stroke: #ffffff;
+    stroke-width: 5px;
+}
